@@ -9,8 +9,9 @@
             <Entry x:Name="txtCorreo" Text="{Binding Correo}"  Placeholder="Correo-e" Keyboard="Email"/>
             <Entry x:Name="txtTelefono" Text="{Binding Telefono}" Placeholder="Teléfono" Keyboard="Telephone"/>
             <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
-                <Button x:Name="cmdGuardar" Text="Guardar" Clicked="cmdGuardar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="Green" TextColor="White" CornerRadius="15"/>
-                <Button x:Name="cmdCancelar" Text="Cancelar" Clicked="cmdCancelar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="PaleVioletRed" TextColor="White" CornerRadius="15"/>
+                <Button x:Name="cmdGuardar" Text="Guardar" Clicked="cmdGuardar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="Blue" TextColor="White" CornerRadius="15"/>
+                <Button x:Name="cmdCancelar" Text="Cancelar" Clicked="cmdCancelar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="Gray" TextColor="White" CornerRadius="15"/>
+                <Button x:Name="cmdEliminar" Text="Eliminar" Clicked="cmdEliminar_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="PaleVioletRed" TextColor="White" CornerRadius="15"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

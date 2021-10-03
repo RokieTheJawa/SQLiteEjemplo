@@ -1,4 +1,5 @@
-﻿using SQLiteEjemplo.Modelo;
+﻿using SQLite;
+using SQLiteEjemplo.Modelo;
 using SQLiteEjemplo.Vistas;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace SQLiteEjemplo
         {
             base.OnAppearing();
             lstPersonas.ItemsSource = null;
+
+            using (var conn = new SQLiteConnection(App.RUTA_DB))
+            {
+                conn.CreateTable<Persona>();
+                lstPersonas.ItemsSource = conn.Table<Persona>().OrderBy(n=>n.Nombre).ToList();
+            }
+
             //lstPersonas.ItemsSource = App.Personas;
         }
 
@@ -80,7 +88,7 @@ namespace SQLiteEjemplo
 
         private void tlbNuevo_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NuevoPage());
+            Navigation.PushAsync(new NuevoPage() { BindingContext=new Persona()});
         }
 
     }
