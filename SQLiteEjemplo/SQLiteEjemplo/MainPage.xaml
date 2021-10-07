@@ -9,9 +9,6 @@
     </ContentPage.ToolbarItems>
     
     <StackLayout Margin="15">
-        <!--<Button Text="Nuevo" Clicked="Boton_Agregar" BackgroundColor="Green" TextColor="White" CornerRadius="15"/>
-        <Button Text="Modificar" Clicked="Boton_Modificar" BackgroundColor="DodgerBlue" TextColor="White" CornerRadius="15"/>
-        <Button Text="Eliminar" Clicked="Boton_Borrar" BackgroundColor="PaleVioletRed" TextColor="White" CornerRadius="15"/>-->
         <ListView x:Name="lstPersonas" ItemSelected="lstPersonas_ItemSelected" HasUnevenRows="True" SeparatorColor="Red" >
             <ListView.ItemTemplate>
                 <DataTemplate>

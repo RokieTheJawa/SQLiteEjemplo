@@ -28,15 +28,6 @@ namespace SQLiteEjemplo.Vistas
             else
             {
                 Persona persona = (Persona)BindingContext;
-                //if (App.seleccionado == true)
-                //{
-                //    //App.Personas.RemoveAt(App.indice);
-                //    //App.Personas.Insert(App.indice, new Modelo.Persona() { Nombre = txtNombre.Text, Correo = txtCorreo.Text, Telefono = txtTelefono.Text });
-                //    App.seleccionado = false;
-                //    Navigation.PopAsync();
-                //}
-                //else
-                //{
                 using (var conn = new SQLiteConnection(App.RUTA_DB))
                 {
                     conn.CreateTable<Persona>();
@@ -50,7 +41,6 @@ namespace SQLiteEjemplo.Vistas
                         conn.Insert(new Persona() { Nombre = txtNombre.Text, Correo = txtCorreo.Text, Telefono = Convert.ToInt32(txtTelefono.Text) });
                     }
                 }
-                //App.Personas.Add(new Modelo.Persona() { Nombre = txtNombre.Text, Correo = txtCorreo.Text, Telefono = txtTelefono.Text });
                 Navigation.PopAsync();
             }
         }
@@ -66,7 +56,6 @@ namespace SQLiteEjemplo.Vistas
                 Persona persona = (Persona)BindingContext;
                 using (var conn = new SQLiteConnection(App.RUTA_DB))
                 {
-                    //conn.CreateTable<Persona>();
                     conn.Delete(persona);
                 }
                 await Navigation.PopAsync();
